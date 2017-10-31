@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <VictorShipping_Shipping>
+            <version>0.1.0</version>
+        </VictorShipping_Shipping>
+    </modules>
+    <global>
+        <models>
+            <victorshipping_shipping>
+                <class>VictorShipping_Shipping_Model</class>
+            </victorshipping_shipping>
+        </models>
+        <helpers>
+            <victorshipping_shipping>
+                <class>VictorShipping_Shipping_Helper</class>
+            </victorshipping_shipping>
+        </helpers>
+    </global>
+    <default>
+        <carriers>
+            <victorshipping_shipping>
+                <active>1</active>
+                <sort_order>10</sort_order>
+                <model>victorshipping_shipping/carrier</model>
+                <title>VicotrShipping Shipping Carrier</title>
+                <sort_order>10</sort_order>
+                <sallowspecific>1</sallowspecific>
+                <express_max_weight>3</express_max_weight>
+            </victorshipping_shipping>
+        </carriers>
+    </default>
+</config>
