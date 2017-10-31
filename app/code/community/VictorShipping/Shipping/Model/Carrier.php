@@ -21,21 +21,6 @@ class VictorShipping_Shipping_Model_Carrier
     {
         /** @var Mage_Shipping_Model_Rate_Result $result */
         $result = Mage::getModel('shipping/rate_result');
-
-        /** @var Inchoo_Shipping_Helper_Data $expressMaxProducts */
-        /*$expressMaxWeight = Mage::helper('victorshipping_shipping')->getExpressMaxWeight();
-
-        $expressAvailable = true;
-        foreach ($request->getAllItems() as $item) {
-            if ($item->getWeight() > $expressMaxWeight) {
-                $expressAvailable = false;
-            }
-        }
-
-        if ($expressAvailable) {
-            $result->append($this->_getExpressRate());
-        }
-	*/
         $result->append($this->_getStandardRate());
 
         return $result;
@@ -50,7 +35,6 @@ class VictorShipping_Shipping_Model_Carrier
     {
         return array(
             'standard'    =>  'Standard delivery',
-            //'express'     =>  'Express delivery',
         );
     }
 
@@ -68,28 +52,8 @@ class VictorShipping_Shipping_Model_Carrier
         $rate->setCarrierTitle($this->getConfigData('title'));
         $rate->setMethod('large');
         $rate->setMethodTitle('Доставка');
-        $value = Mage::helper('victorshipping_shipping')->getExpressMaxWeight();
-        $rate->setPrice($value);
-        $rate->setCost(0);
-
-        return $rate;
-    }
-
-    /**
-     * Get Express rate object
-     *
-     * @return Mage_Shipping_Model_Rate_Result_Method
-     */
-    protected function _getExpressRate()
-    {
-        /** @var Mage_Shipping_Model_Rate_Result_Method $rate */
-        $rate = Mage::getModel('shipping/rate_result_method');
-
-        $rate->setCarrier($this->_code);
-        $rate->setCarrierTitle($this->getConfigData('title'));
-        $rate->setMethod('express');
-        $rate->setMethodTitle('Express delivery');
-        $rate->setPrice(12.3);
+        $price = Mage::helper('victorshipping_shipping')->getPriceValue();
+        $rate->setPrice($price);
         $rate->setCost(0);
 
         return $rate;

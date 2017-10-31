@@ -47,7 +47,7 @@
                             <show_in_store>0</show_in_store>
                             <can_be_empty>1</can_be_empty>
                         </specificcountry>
-                        <express_max_weight translate="label">
+                        <price_value translate="label">
                             <label>Price</label>
                             <comment>Price value</comment>
                             <frontend_type>text</frontend_type>
@@ -55,15 +55,15 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </express_max_weight>
-			<sort_order translate="label">
-			    <label>Sort Order</label>
-			    <frontend_type>text</frontend_type>
-			    <sort_order>500</sort_order>
-			    <show_in_default>1</show_in_default>
+                        </price_value>
+            			<sort_order translate="label">
+            			    <label>Sort Order</label>
+            			    <frontend_type>text</frontend_type>
+            			    <sort_order>500</sort_order>
+            			    <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-			</sort_order>
+            			</sort_order>
                     </fields>
                 </victorshipping_shipping>
             </groups>

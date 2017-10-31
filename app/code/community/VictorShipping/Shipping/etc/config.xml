@@ -2,7 +2,7 @@
 <config>
     <modules>
         <VictorShipping_Shipping>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </VictorShipping_Shipping>
     </modules>
     <global>
@@ -23,10 +23,10 @@
                 <active>1</active>
                 <sort_order>10</sort_order>
                 <model>victorshipping_shipping/carrier</model>
-                <title>VicotrShipping Shipping Carrier</title>
+                <title>VictorShipping</title>
                 <sort_order>10</sort_order>
                 <sallowspecific>1</sallowspecific>
-                <express_max_weight>3</express_max_weight>
+                <price_value>0</price_value>
             </victorshipping_shipping>
         </carriers>
     </default>

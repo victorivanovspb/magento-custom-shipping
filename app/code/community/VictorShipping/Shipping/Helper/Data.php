@@ -3,15 +3,15 @@
 class VictorShipping_Shipping_Helper_Data extends
     Mage_Core_Helper_Abstract
 {
-    const XML_EXPRESS_MAX_WEIGHT = 'carriers/victorshipping_shipping/express_max_weight';
+    const XML_PRICE_VALUE = 'carriers/victorshipping_shipping/price_value';
 
     /**
-     * Get max weight of single item for express shipping
+     * Get price value
      *
      * @return mixed
      */
-    public function getExpressMaxWeight()
+    public function getPriceValue()
     {
-        return Mage::getStoreConfig(self::XML_EXPRESS_MAX_WEIGHT);
+        return Mage::getStoreConfig(self::XML_PRICE_VALUE);
     }
 }
